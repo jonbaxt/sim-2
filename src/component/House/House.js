@@ -14,16 +14,22 @@ export default function House(props, delReq){
     let theHouses = arr.map( (house, index ) =>{
         return (
             <div key={house.id} className='houseBox colGray'>
-             <div>
+                <div className='contHouse'>
+             <div className='picDiv'>
+             <img src='' alt='' />
+             </div>
+             <div className='infoDiv'>
              <p>{`Property Name: ${house.name}`}</p>
              <p>{`Address: ${house.address}`}</p>
              <p>{`City: ${house.city}`}</p>
              <p>{`State: ${house.state}`}</p>
              <p>{`Zip: ${house.zip}`}</p>
              </div>
-             <div >
+             <div className='deldiv' >
                  <button onClick={() => delReq(house.id)}><img className='del' src={del} alt=''  /></button>
              </div>
+            
+                </div> 
             </div>
         )
     })
@@ -31,7 +37,7 @@ export default function House(props, delReq){
 // }
 
     return (
-        <div>
+        <div className='houseOuter'>
             {theHouses}
         </div>
     )
