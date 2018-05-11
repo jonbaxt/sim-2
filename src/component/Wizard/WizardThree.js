@@ -29,24 +29,20 @@ class WizardThree extends Component {
         this.props.addMortgage(this.state.mortgage);
         this.props.addRent(this.state.rent);
     }
-    // compileAxiosRequest(){
-
-    // }
 
     postNewHouseToDatabase() {
         this.sendToRedux();
-
-        console.log(this.props.name,
-            this.props.address,
-            this.props.city,
-            this.props.state,
-            this.props.zip,
-            this.props.img,
-            this.state.mortgage,
-            this.state.rent
-            // this.props.mortgage,
-            // this.props.rent
-        );
+        // console.log(this.props.name,
+        //     this.props.address,
+        //     this.props.city,
+        //     this.props.state,
+        //     this.props.zip,
+        //     this.props.img,
+        //     this.state.mortgage,
+        //     this.state.rent,
+        //     this.props.mortgage,
+        //     this.props.rent
+        // );
 
         const newHouse = {
             name: this.props.name,
@@ -60,18 +56,13 @@ class WizardThree extends Component {
         }
         axios.post('/api/house/submitnew', newHouse)
         .then( (element) => {
-            console.log( element );
-            // this.setState({
-
-            // })
+            // console.log( element );
+            //This updates as the form goes back to dashboard.
         }).catch( err => console.log( err ));
-
         this.props.cancelWizard();
     }
 
     render() {
-        console.log(this.props);
-
         return (
             <div className='wizMain colLight'>
                 <div className='wizTop'>
@@ -88,7 +79,6 @@ class WizardThree extends Component {
                     <Link to='/wizard/step2'>
                         <button className='cancelButt colDarG texWh'>Previous Step</button>
                     </Link>
-
                     <Link to='/'>
                     <button className='cancelButt colGreen' onClick={this.postNewHouseToDatabase}>Complete</button>
                     </Link>

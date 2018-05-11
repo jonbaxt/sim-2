@@ -12,6 +12,10 @@
   flex-direction: column;
 }
 
+.cent{
+  justify-content: center;
+}
+
 .flR{
   flex-direction: row;
 }
@@ -20,8 +24,11 @@
   border: 2px solid black;
 }
 
-.headerArea{
-    /* margin-left:  ; */
+.headerPos{
+  justify-content: start;
+  
+  padding-left: 15rem;
+  font-size: 30px;
 }
 
 
@@ -69,8 +76,8 @@
 /* --------------------------------------------------------------------------------*/
 
 .imgRes{
-  width: 20px;
-  height: 20px;
+  width: 38px;
+  height: 30px;
 }
 .padT{
 padding-top: 5rem;

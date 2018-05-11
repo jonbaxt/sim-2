@@ -52,7 +52,7 @@ class WizardOne extends Component {
                     <h1>Add New Listing</h1>
                     <Link to='/'><button className='cancelButt colPink' onClick={this.props.cancelWizard}>Cancel</button></Link>
                 </div>
-                <div className='wizForm'>
+                <div className='wizForm cent'>
                     <h2>Property Name</h2>
                     <input type='text' onChange={(e) => this.nameChange(e.target.value)} value={this.state.name} />
                     <h2>Address</h2>
