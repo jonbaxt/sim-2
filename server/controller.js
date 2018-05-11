@@ -25,8 +25,8 @@ module.exports = {
     },
     postNewHouse: (req, res, next) => {
         const dbInstance = req.app.get( 'db' );
-        const { name, address, city, state, zip } = req.body;
-        dbInstance.submitHouse([ name, address, city, state, zip ])
+        const { name, address, city, state, zip, img, mortgage, rent } = req.body;
+        dbInstance.submitHouse([ name, address, city, state, zip, img, mortgage, rent ])
         .then( (callb )  => {
             res.status(200).send(callb);    
         }).catch( (err) => {

@@ -41,18 +41,27 @@ class Dashboard extends Component {
     
     render() {
         return (
+
             <div className='dashCont colLight'>
-                <div className='dashTop'>
+                <div className='dashIn' >
+                    <div className='dashTop'>
                     <h1>Dashboard</h1>
-                    <Link to='/wizard' ><button className='cancelButt colGreen'>Add New Property</button></Link>
-                </div>
-                <div className='houseBox'>
+                    <Link to='/wizard/step1' ><button className='addButt colGreen'>Add New Property</button></Link>
+                    </div>
+                    <div className='dashTop'>
                     <p>   ___________________________________________________________</p>
+                    </div>
+                    <div>
                     <h2>Home Listings</h2>
-                    {House(this.giveToHouse, this.handleDelete)}
-                    {/* <House give={giveToHouse} /> */}
+                    </div>
                 </div>
+              
+              <div className='houseBox '>
+              {House(this.giveToHouse, this.handleDelete)}
+              {/* <House give={giveToHouse} /> */}
+          </div>
             </div>
+
         )
     }
 

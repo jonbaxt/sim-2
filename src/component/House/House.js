@@ -16,7 +16,7 @@ export default function House(props, delReq){
             <div key={house.id} className='houseBox colGray'>
                 <div className='contHouse'>
              <div className='picDiv'>
-             <img src='' alt='' />
+             <img className='picS' src={house.img} alt='' />
              </div>
              <div className='infoDiv'>
              <p>{`Property Name: ${house.name}`}</p>
@@ -24,6 +24,10 @@ export default function House(props, delReq){
              <p>{`City: ${house.city}`}</p>
              <p>{`State: ${house.state}`}</p>
              <p>{`Zip: ${house.zip}`}</p>
+             </div>
+             <div>
+             <p>{`Monthly Mortgage: ${house.mortgage}`}</p>
+             <p>{`Desired Rent: ${house.rent}`}</p>
              </div>
              <div className='deldiv' >
                  <button onClick={() => delReq(house.id)}><img className='del' src={del} alt=''  /></button>
