@@ -9,11 +9,11 @@ class WizardOne extends Component {
     constructor() {
         super()
         this.state = {
-            name: 'Bobby',
-            address: '123 Fake Street',
-            city: 'Denver',
-            state: 'UT',
-            zip: 45614 
+            name: '',
+            address: '',
+            city: '',
+            state: '',
+            zip: 0 
         }
         this.nameChange = this.nameChange.bind(this);
         this.addressChange = this.addressChange.bind(this);
@@ -46,20 +46,28 @@ class WizardOne extends Component {
         this.props.addZip( this.state.zip);
     }
     render() {
+        console.log(this.props.match)
         return (
-            <div className='wizMain colLight'>
-                <div className='wizTop'>
+            <div className='wizMain colLight  fl '>
+                <div className='wizTop padleft'>
+                    
+                    <div>
                     <h1>Add New Listing</h1>
-                    <Link to='/'><button className='cancelButt colPink' onClick={this.props.cancelWizard}>Cancel</button></Link>
+                    </div>
+                    <div className='buttPad' >
+                    <Link to='/'><button className='cancelButt colPink bold' onClick={this.props.cancelWizard}>Cancel</button></Link>
+                    </div>
                 </div>
                 <div className='wizForm cent'>
                     <h2>Property Name</h2>
                     <input type='text' onChange={(e) => this.nameChange(e.target.value)} value={this.state.name} />
                     <h2>Address</h2>
                     <input type='text' onChange={(e) => this.addressChange(e.target.value)} value={this.state.address} />
+                    <div className='wizTop'>
+                        <div className='wizForm'>
                     <h2>City</h2>
                     <input type='text' onChange={(e) => this.cityChange(e.target.value)} value={this.state.city} />
-                    <div className='wizTop'>
+                        </div>
                         <div className='wizForm'>
                             <h2>State</h2>
                             <input type='text' onChange={ (e) => this.stateChange(e.target.value)} value={this.state.state} />

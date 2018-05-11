@@ -9,8 +9,8 @@ class WizardThree extends Component {
     constructor() {
         super()
         this.state = {
-            mortgage: 500,
-            rent: 200,
+            mortgage: 0,
+            rent: 0,
         }
         this.mortgageChange = this.mortgageChange.bind(this)
         this.rentChange = this.rentChange.bind(this);
@@ -67,7 +67,7 @@ class WizardThree extends Component {
             <div className='wizMain colLight'>
                 <div className='wizTop'>
                     <h1>Add New Listing</h1>
-                    <Link to='/'><button className='cancelButt colPink' onClick={this.props.cancelWizard}>Cancel</button></Link>
+                    <Link className='buttPad' to='/'><button className='cancelButt colPink bold' onClick={this.props.cancelWizard}>Cancel</button></Link>
                 </div>
                 <div className='wizForm'>
                     <h2>Monthly Mortgage Amount</h2>

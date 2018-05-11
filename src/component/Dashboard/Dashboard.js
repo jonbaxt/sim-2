@@ -15,16 +15,12 @@ class Dashboard extends Component {
         this.handleDelete = this.handleDelete.bind( this )
     }
     componentDidMount() {
-        // console.log(`Connecting to database from dash`)
         axios.get('/api/houses').then((element) => {
             this.setState({ houses: element.data })
-            // console.log(`From Component did mount `, element.data);
         }).catch(err => console.log(`Something went wrong mounting. ${err} `))
-        // return this.state.houses;
     }
     
     handleDelete(id) {
-        // console.log('delete called ', id)
         const convert = Number(id)
         axios.delete(`/api/house/${convert}`)
         .then((element) => {
@@ -40,13 +36,13 @@ class Dashboard extends Component {
     }
     
     render() {
+        console.log(this.props.match)
         return (
-
             <div className='dashCont colLight'>
                 <div className='dashIn' >
                     <div className='dashTop'>
                     <h1>Dashboard</h1>
-                    <Link to='/wizard/step1' ><button className='addButt colGreen'>Add New Property</button></Link>
+                    <Link className='buttPad' to='/wizard/step1' ><button className='bold addButt colGreen'>Add New Property</button></Link>
                     </div>
                     <div className='dashTop'>
                     <p>   ___________________________________________________________</p>

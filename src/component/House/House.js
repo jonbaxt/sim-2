@@ -30,7 +30,7 @@ export default function House(props, delReq){
              <p>{`Desired Rent: ${house.rent}`}</p>
              </div>
              <div className='deldiv' >
-                 <button onClick={() => delReq(house.id)}><img className='del' src={del} alt=''  /></button>
+                 <button className='otherButt' onClick={() => delReq(house.id)}><img className='del' src={del} alt=''  /></button>
              </div>
             
                 </div> 

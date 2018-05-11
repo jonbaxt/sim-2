@@ -8,7 +8,7 @@ class WizardTwo extends Component {
     constructor() {
         super()
         this.state = {
-            img: 'http://www.leehomes.info/wp-content/uploads/nice-house-dynasty-luxury-homes-628-hbrd-nice-homes.jpg'
+            img: ''
         }
         this.imgChange = this.imgChange.bind(this);
         this.sendToRedux = this.sendToRedux.bind(this);
@@ -23,11 +23,12 @@ class WizardTwo extends Component {
     }
 
     render() {
+        console.log(this.props.match)
         return (
             <div className='wizMain colLight'>
                 <div className='wizTop'>
                     <h1>Add New Listing</h1>
-                    <Link to='/'><button className='cancelButt colPink' onClick={this.props.cancelWizard}>Cancel</button></Link>
+                    <Link className='buttPad' to='/'><button className='cancelButt colPink bold' onClick={this.props.cancelWizard}>Cancel</button></Link>
                 </div>
 
 
