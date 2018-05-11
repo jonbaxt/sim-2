@@ -20,8 +20,13 @@
   border: 2px solid black;
 }
 
+.headerArea{
+    /* margin-left:  ; */
+}
+
 
 .head{
+
   width: 100%;
   height: 4rem;
   color: white;
@@ -36,7 +41,7 @@
 .colMedG{
   background-color: #519872;
 }
-.coLightG{
+.colLightG{
   background-color: #AFD4C0;
 }
 .colLight{
@@ -58,3 +63,47 @@
 
 
 /* --------------------------------------------------------------------------------*/
+
+.imgRes{
+  width: 20px;
+  height: 20px;
+}
+
+.dashCont{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 100vh;
+  margin: 0 auto;
+}
+.dashTop{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.dashTop>h1{
+  margin-left: 50px;
+}
+
+.cancelButt{
+  border: none;
+  height: 3rem;
+  width: 4rem;
+}
+.wizMain{
+display: flex;
+flex-direction: column;
+width: 60%;
+height: 100vh;
+margin: 0 auto;
+}
+.wizTop{
+  display: flex;
+  flex-direction: row;
+}
+
+.pad{
+  padding-top: 6rem;
+  text-align: right;
+  padding-right: 3rem;
+}

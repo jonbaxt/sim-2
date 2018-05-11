@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Header from './component/Header/Header'
-import Dashboard from './component/Dashboard/Dashboard'
-import Wizard from './component/Wizard/Wizard'
+import route from './route'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App colLightG ">
       <div className='headerArea'>
         <Header />
       </div>
       {/* This will be routes */}
-      <Dashboard />
-      
-      <Wizard />
+      {route}
       
       
       
