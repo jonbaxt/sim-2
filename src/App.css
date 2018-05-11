@@ -1,28 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 .App {
-  text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.fl{
+  display: flex;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.flC{
+  flex-direction: column;
+}
+
+.flR{
+  flex-direction: row;
+}
+
+.boxOut{
+  border: 2px solid black;
+}
+
+
+.head{
+  width: 100%;
+  height: 4rem;
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+
+/* -------------------------------------------------------------------------------- */
+
+.colDarG{
+  background-color: #3B5249;
+}
+.colMedG{
+  background-color: #519872;
+}
+.coLightG{
+  background-color: #AFD4C0;
+}
+.colLight{
+  background-color: #E5F4EC;
+}
+.colGreen{
+  background-color: #8AEA92;
+}
+.colPink{
+  background-color: #FEC2C2;
+}
+.colGray{
+  background-color: #DEDEDE;
 }
 
-.App-intro {
-  font-size: large;
-}
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+
+
+
+
+/* --------------------------------------------------------------------------------*/
